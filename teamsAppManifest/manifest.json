@@ -1,0 +1,49 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.5",
+  "version": "1.0",
+  "id": "d0f48706-badd-497f-b6fa-db8f628a6697",
+  "packageName": "com.microsoft.teams.samples.searchExtension",
+  "developer": {
+    "name": "Microsoft Corp",
+    "websiteUrl": "https://example.azurewebsites.net",
+    "privacyUrl": "https://example.azurewebsites.net/privacy",
+    "termsOfUseUrl": "https://example.azurewebsites.net/termsofuse"
+  },
+  "name": {
+    "short": "Farmers Agent Search",
+    "full": "Farmers Agent Search by zipcode"
+  },
+  "description": {
+    "short": "Farmers Agent Search by zipcode",
+    "full": "Farmers Agent Search by zipcode"
+  },
+  "icons": {
+    "outline": "icon-color.png",
+    "color": "icon-color.png"
+  },
+  "accentColor": "#abcdef",
+  "composeExtensions": [
+    {
+      "botId": "d0f48706-badd-497f-b6fa-db8f628a6697",
+      "canUpdateConfiguration": true,
+      "commands": [
+        {
+          "id": "searchQuery",
+          "context": [ "compose", "commandBox" ],
+          "description": "Type Zipcode to search for agents",
+          "title": "Search",
+          "type": "query",
+          "parameters": [
+            {
+              "name": "searchQuery",
+              "title": "Search Query",
+              "description": "Your search query",
+              "inputType": "text"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
